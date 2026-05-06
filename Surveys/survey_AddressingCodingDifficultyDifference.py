@@ -55,27 +55,39 @@ def _calculate_grade(score,extra_credit):
 # comments: i did not cry once
 # credits to: github.com/gdcolo7 <-- that is me
 
-print("Total score shouldn't exceed 100.")
-score = int(input("Type in the score/grade: "))
-extra_credit = int(input("Type in the extra credits: ")) 
+try:
+    print("Total score shouldn't exceed 100.")
+    score = int(input("Type in the score/grade: "))
+    extra_credit = int(input("Type in the extra credits: ")) 
+    if score == 100:
+        print("score is 100, no extra credits needed")
+        print(100)
+        sys.exit(0)
+    elif score >= 101:
+        print("Score is more than 100?")
+        sys.exit(1)
+        
+    if extra_credit == 100:
+        print("Extra credit is 100?")
+        sys.exit(1)
+    # negative handler
+
+    if score < 0 or extra_credit < 0:
+        print("Negative int?")
+        sys.exit(1)
 
 
-# error handlers
-if score == 100:
-    print("score is 100, no extra credits needed")
-    print(100)
-    sys.exit(0)
-elif score >= 101:
-    print("Score is more than 100?")
+except ValueError:
+    print("Error: Not an int!")
     sys.exit(1)
-    
-if extra_credit == 100:
-    print("Extra credit is 100?")
-    sys.exit(1)
-# negative handler
 
-if score < 0 or extra_credit < 0:
-    print("Negative int?")
+except KeyboardInterrupt:
+    print("Keyboard interrupt!")
+    sys.exit(1)
+
+except ArithmeticError:
+    print("Arithmetic Error!")
+    print("Achievement got! [How did we get here?]")
     sys.exit(1)
 
 
