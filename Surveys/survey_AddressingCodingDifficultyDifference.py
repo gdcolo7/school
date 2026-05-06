@@ -37,7 +37,7 @@ def _calculate_grade(score,extra_credit):
     last_digit = total_grade % 10
 
     if letter == 'F': # first and foremost
-        sign = "neutral" # don't be too harsh on the student HAHAHAHA
+        sign = "" # don't be too harsh on the student HAHAHAHA
     elif last_digit >= 7 or total_grade == 100:
         sign = "+"
     elif last_digit <= 3:
