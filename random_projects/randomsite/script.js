@@ -1,1 +1,1 @@
-// site created by marq deguzman
+// site created by vix
