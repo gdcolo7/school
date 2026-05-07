@@ -1,0 +1,92 @@
+/* fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Elms Sans';
+  src: url('fonts/Elms_Sans/ElmsSans-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Light mode (default) */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --light-bg: #ccc
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #ffffff;
+    --light-bg: #444
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  font-family: 'Elms Sans', 'Quicksand';
+  padding: 1%;
+  font-size: 20px;
+  overflow: visible;
+}
+
+button {
+    padding: 1%;
+    border-radius: 8px;
+    background-color: var(--light-bg);
+    color: var(--text);
+}
+
+sub {
+    color: #323232;
+}
+
+br {
+  content: "";
+  display: block;
+  margin-bottom: 1.5em; /* Adjust this value to get the desired double-spacing */
+}
+
+div::after {
+  content: "\A";
+  white-space: pre;
+}
+
+h1 {
+  width: 100%;
+  margin-top: 0;
+}
+
+h1::after {
+  content: "";       /* Required for pseudo-elements to render */
+  display: block;    /* Ensures it stays on its own line */
+  height: 2px;       /* Line thickness */
+  background: #ccc;  /* Line color */
+  margin-top: 20px;  /* Spacing from content */
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  background: transparent;
+}
+
+
+.grid > div {
+  background-color: #323232;
+  border-radius: 32px;
+  padding: 2%;
+  margin-bottom: 20px;
+  flex: 1;
+}
