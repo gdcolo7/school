@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cp566mjcv24sa"]
+
+[ext_resource type="AudioStream" uid="uid://clmqiyby7nm2f" path="res://songs/t+pazolite - Cheatreal (#TPZREMAKE).mp3" id="1_mj74c"]
+[ext_resource type="Texture2D" uid="uid://fnhuguvx867a" path="res://assets/Baby Pink.png" id="2_68ppf"]
+[ext_resource type="Script" uid="uid://brh6t6e6oqwh" path="res://menus/notes.gd" id="3_iil3p"]
+
+[node name="Gameplay" type="Node2D" unique_id=969025640]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=129614940]
+stream = ExtResource("1_mj74c")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=322878873]
+offset_left = 391.0
+offset_top = 600.0
+offset_right = 797.0
+offset_bottom = 608.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1572773886]
+position = Vector2(443.00003, 25.000061)
+scale = Vector2(0.5133333, 0.5133333)
+texture = ExtResource("2_68ppf")
+script = ExtResource("3_iil3p")

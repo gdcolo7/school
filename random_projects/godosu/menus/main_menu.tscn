@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dive4ns5kviul"]
+
+[ext_resource type="Script" uid="uid://b7gbjpcfimvtc" path="res://menus/gotoGameplay.gd" id="1_8gy84"]
+
+[node name="MainMenu" type="Node2D" unique_id=916889661]
+
+[node name="Button" type="Button" parent="." unique_id=1933925220]
+offset_left = 347.0
+offset_top = 209.0
+offset_right = 718.0
+offset_bottom = 403.0
+text = "Go to game"
+script = ExtResource("1_8gy84")
